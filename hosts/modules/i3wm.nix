@@ -1,11 +1,19 @@
+{pkgs,...}:
 {
     services.xserver = {
   enable = true;
   layout= "us";
   xkbVariant = "";
-  windowManager.i3.enable = true;
+  windowManager.i3 = {
+    enable = true;
+    extraPackages = with pkgs; [
+    rofi
+    i3status
+    i3lock
+    ];
   };
-  services.displayManager = {
+  };
+    displayManager = {
     sddm = true;
     defaultSession = "none+i3";
   };
