@@ -11,7 +11,7 @@
   # You can import other home-manager modules here
   imports = [
 
-    ../modules/i3wm.nix
+    ../../modules/home-manager/i3wm.nix
 
 
   ];
