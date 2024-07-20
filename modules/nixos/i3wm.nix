@@ -5,8 +5,8 @@
   xkbVariant = "";
   windowManager.i3.enable = true;
   };
- displayManager = {
-    sddm = true;
+ services.xserver.displayManager = {
+    lightdm.enable = true;
     defaultSession = "none+i3";
   };
   }

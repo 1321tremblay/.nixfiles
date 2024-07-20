@@ -14,10 +14,14 @@
     inputs.home-manager.nixosModules.home-manager
 
 
-    ../modules/pipewire.nix
-    ../modules/systemmd-boot.nix
-    ../modules/others.nix
-    ../modules/i3wm.nix
+ 
+
+
+
+    ../../modules/nixos/i3wm.nix
+    ../../modules/nixos/others.nix
+    ../../modules/nixos/pipewire.nix
+    ../../modules/nixos/systemmd-boot.nix
 
     # If you want to use modules your own flake exports (from modules/nixos):
     # outputs.nixosModules.example
@@ -79,7 +83,7 @@
     extraSpecialArgs = { inherit inputs outputs; };
     users = {
       # Import your home-manager configuration
-      olivier = import ../home-manager/home.nix;
+      olivier = import ./home.nix;
     };
   };
 
